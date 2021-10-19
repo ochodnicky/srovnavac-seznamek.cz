@@ -1,0 +1,17 @@
+@import "_variables.scss";
+
+@import "vendor/_normalize.scss";
+
+@import "abstract/_fonts.scss";
+
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "layout/_page.scss";
+
+
+
+@import "components/_animations.scss";
+@import "components/_hero.scss";
+@import "components/_buttons.scss";
+@import "components/_pricing.scss";
+@import "components/_services.scss";

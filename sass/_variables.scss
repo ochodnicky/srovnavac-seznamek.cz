@@ -1,0 +1,138 @@
+$color-primary: #2ecd5c;
+$color-secondary: #00968b;
+$color-white: #fff;
+$color-black: #222025;
+$color-grey: #3c3a3a;
+$color-greyCross: #aaa;
+$color-pros: $color-primary;
+$color-cons: #ff0000;
+
+$color-greyLight: #f5f5f5;
+$color-greyDark: #c7c7c7;
+$color-green: #2add66;
+
+$primary-gradient: radial-gradient(circle farthest-corner at 10% 20%, rgba(253, 101, 133, 0.3) 0%, rgba(255, 211, 165, .5) 90%);
+$secondary-gradient: linear-gradient(90deg, rgba(255, 234, 164, 1) 0%, rgba(255, 245, 212, 1) 100%);
+$button-gradient: linear-gradient(to right top, #95e248, #34c65d);
+
+$font-main: "Montserrat", sans-serif;
+$font-awesome: "Font Awesome 5 Free";
+
+$hero-radius: 4rem 16rem;
+$border-radius: 0.4rem 1.6rem;
+$border-radius-hover: 1.6rem 0.4rem;
+
+$box-shadow: 5px 10px 15px 5px rgba(0, 0, 0, 0.05);
+
+$viewports: (xsmall: (min: 1px,
+		max: 320px,
+	),
+	small: (min: 321px,
+		max: 767px,
+	),
+	medium: (min: 768px,
+		max: 992px,
+	),
+	large: (min: 993px,
+		max: 1199px,
+	),
+	xlarge: (min: 1200px,
+		max: 3000px,
+	),
+);
+
+@mixin xsmall-up {
+	@media screen and (min-width: map-get(map-get($viewports, small), min)) {
+		@content;
+	}
+}
+
+@mixin small-up {
+	@media screen and (min-width: map-get(map-get($viewports, small), min)) {
+		@content;
+	}
+}
+
+@mixin medium-up {
+	@media screen and (min-width: map-get(map-get($viewports, medium), min)) {
+		@content;
+	}
+}
+
+@mixin large-up {
+	@media screen and (min-width: map-get(map-get($viewports, large), min)) {
+		@content;
+	}
+}
+
+@mixin xlarge-up {
+	@media screen and (min-width: map-get(map-get($viewports, xlarge), min)) {
+		@content;
+	}
+}
+
+@mixin xsmall-only {
+	@media screen and (min-width: map-get(map-get($viewports, small), min)) and (max-width: map-get(map-get($viewports, small), max)) {
+		@content;
+	}
+}
+
+@mixin small-only {
+	@media screen and (min-width: map-get(map-get($viewports, small), min)) and (max-width: map-get(map-get($viewports, small), max)) {
+		@content;
+	}
+}
+
+@mixin medium-only {
+	@media screen and (min-width: map-get(map-get($viewports, medium), min)) and (max-width: map-get(map-get($viewports, medium), max)) {
+		@content;
+	}
+}
+
+@mixin large-only {
+	@media screen and (min-width: map-get(map-get($viewports, large), min)) and (max-width: map-get(map-get($viewports, large), max)) {
+		@content;
+	}
+}
+
+@mixin xlarge-only {
+	@media screen and (min-width: map-get(map-get($viewports, xlarge), min)) and (max-width: map-get(map-get($viewports, xlarge), max)) {
+		@content;
+	}
+}
+
+@mixin xsmall-max {
+	@media screen and (max-width: map-get(map-get($viewports, xsmall), max)) {
+		@content;
+	}
+}
+
+@mixin small-max {
+	@media screen and (max-width: map-get(map-get($viewports, small), max)) {
+		@content;
+	}
+}
+
+@mixin medium-max {
+	@media screen and (max-width: map-get(map-get($viewports, medium), max)) {
+		@content;
+	}
+}
+
+@mixin large-max {
+	@media screen and (max-width: map-get(map-get($viewports, large), max)) {
+		@content;
+	}
+}
+
+@mixin xlarge-max {
+	@media screen and (max-width: map-get(map-get($viewports, xlarge), max)) {
+		@content;
+	}
+}
+
+@mixin xsmall-min {
+	@media screen and (max-width: map-get(map-get($viewports, small), min)) {
+		@content;
+	}
+}

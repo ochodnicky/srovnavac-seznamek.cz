@@ -1,0 +1,56 @@
+.button {
+	background: $button-gradient;
+	color: $color-white;
+	text-align: center;
+	border: 0;
+	padding: 1.5rem 3rem;
+	border-radius: $border-radius;
+	font-size: 1.8rem;
+	font-weight: 600;
+	transition: all 0.3s ease-in-out;
+	user-select: none;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+	line-height: 1;
+	text-decoration: none;
+	outline: none;
+	box-shadow: 0;
+
+	@include small-max {
+		font-size: 1.6rem;
+		padding: 1.2rem 2rem;
+	}
+
+	&:hover {
+		border-radius: $border-radius-hover;
+		color: $color-white;
+	}
+
+	&--large {
+		padding: 2rem 4rem;
+
+		@include small-max {
+			padding: 1.5rem 3rem;
+		}
+	}
+
+	&--white {
+		background: white;
+		color: $color-primary;
+
+		&:hover {
+			color: darken($color: $color-primary, $amount: 10);
+		}
+	}
+
+	&--shadow {
+		box-shadow: 3px 3px 10px 0px rgba($color: #000000, $alpha: .05);
+	}
+
+	&--black {
+		background: linear-gradient(-90deg, rgba(38, 38, 38, 1) 0%, rgba(62, 62, 62, 1) 100%);
+		color: white;
+	}
+}

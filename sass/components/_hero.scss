@@ -1,0 +1,122 @@
+.hero {
+	margin-top: 8rem;
+	color: $color-black;
+	padding: 0 3rem;
+
+	@include small-max {
+		padding: 0 1rem;
+	}
+
+	&__body {
+		border-radius: $hero-radius;
+		background: $primary-gradient;
+		max-width: 1600px;
+		margin: 0 auto;
+		padding-top: 4rem;
+
+		@include small-max {
+			border-radius: 4rem 8rem;
+		}
+	}
+
+	&__content {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		padding: 8rem 0;
+
+		@include large-max {
+			padding: 2rem 4rem;
+		}
+
+		@include small-max {
+			padding: 2rem 2rem;
+		}
+	}
+
+	&__left {
+		flex-basis: 60%;
+
+		@include medium-max {
+			flex-basis: 100%;
+			margin-bottom: 10rem;
+		}
+
+		h1 {
+			margin-top: 10rem;
+
+			@include medium-max {
+				margin-top: 0;
+			}
+		}
+
+		.button {
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__right {
+		flex-basis: 40%;
+
+		@include medium-max {
+			flex-basis: 100%;
+			text-align: center;
+		}
+	}
+
+	p {
+		font-size: 2rem;
+		line-height: 1.6;
+		margin-bottom: 3rem;
+
+
+		@include medium-max {
+			font-size: 1.7rem;
+		}
+	}
+
+	.winner {
+		position: relative;
+		width: 300px;
+		float: right;
+		opacity: 0;
+		transform:translate3d(0, 100%, 0);
+		animation: fadeIn 1000ms forwards, heroReveal 800ms forwards, heroLevitate 5s infinite;
+		animation-delay: 200ms, 200ms, 1400ms;
+
+		@include xlarge-up {
+			right: -80px;
+		}
+
+		@include large-max {
+			width: 280px;
+			margin-bottom: 2rem;
+		}
+
+		@include medium-max {
+			display: none;
+		}
+
+		&__sticker {
+			position: absolute;
+			right: 0;
+			top: 0;
+			text-align: center;
+			transform: translate(49%, -60%) rotate(40deg);
+			width: 32%;
+			z-index: 6;
+			opacity: 0;
+			animation: winnerNominate 800ms forwards linear, crownMove 5s infinite linear;
+			animation-delay: 600ms, 1400ms;
+			transform: rotate(0);
+			transform-origin: bottom center;
+		}
+
+
+		&__img {
+			position: relative;
+			z-index: 3;
+		}
+	}
+}

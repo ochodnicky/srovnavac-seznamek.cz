@@ -1,0 +1,169 @@
+html {
+	font-size: 10px;
+
+}
+
+body {
+	font-family: $font-main;
+	font-size: 1.6rem;
+	color: $color-black;
+	overflow-x: hidden;
+
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+.container {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0 2rem;
+
+	@include large-max {
+		max-width: 960px;
+		padding: 0 1.5rem;
+	}
+
+	@include medium-max {
+		max-width: 720px;
+	}
+
+	@include small-max {
+		max-width: 560px;
+	}
+
+	@include xsmall-max {
+		max-width: 100%;
+		padding: 0 1rem;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+h1 {
+	font-size: 6.5rem;
+	margin: 0 0 3rem 0;
+
+	@include medium-max {
+		font-size: 5rem;
+	}
+
+	@include small-max {
+		font-size: 4rem;
+		margin-bottom: 2.5rem;
+	}
+
+	@include xsmall-max {
+		font-size: 3rem;
+	}
+}
+
+h2 {
+	font-size: 4rem;
+	margin: 4rem 0 1rem 0;
+
+	@include medium-max {
+		font-size: 3rem;
+	}
+
+
+}
+
+h3 {
+	font-size: 3rem;
+	margin: 4rem 0 1rem 0;
+
+
+	@include medium-max {
+		font-size: 2.5rem;
+	}
+
+	@include small-max {
+		font-size: 2rem;
+	}
+
+	@include xsmall-max {
+		font-size: 1.5rem;
+	}
+}
+
+p {
+	margin-bottom: 2rem;
+	line-height: 1.7;
+}
+
+section {
+	h2.section-title {
+		color: $color-black;
+		margin-bottom: 6rem;
+
+		span.section-pretitle {
+			display: block;
+			color: $color-primary;
+			font-size: 0.4em;
+			font-weight: 700;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+			position: relative;
+
+			&--stripe {
+				display: flex;
+				align-items: center;
+
+				&:before {
+					content: "";
+					width: 50px;
+					height: 2px;
+					background-color: $color-primary;
+					margin-right: 1rem;
+				}
+			}
+		}
+
+		&--center {
+			text-align: center;
+		}
+
+		&--bw {
+			span.section-pretitle {
+				color: white;
+			}
+		}
+	}
+}
+
+section.dating-services {
+	min-height: 500px;
+	padding: 4rem 0 0;
+	margin-top: -24rem;
+	position: relative;
+	z-index: 9;
+	overflow: hidden;
+
+	@include large-max {
+		margin-top: -14rem;
+	}
+
+}
+
+section.pricing-table {
+	padding: 12rem 0;
+
+	background-image: radial-gradient(circle 879px at 10.4% 22.3%, rgba(255, 235, 238, 1) 0%, rgba(186, 190, 245, 1) 93.6%);
+	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(239, 246, 249, 1) 0%, rgba(206, 239, 253, 1) 90%);
+	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(178, 232, 250, 1) 0%, rgba(44, 163, 243, 1) 90%);
+}
+
+section.article {
+	padding: 12rem 0;
+}
